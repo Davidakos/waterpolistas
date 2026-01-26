@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waterpolistas</title>
@@ -33,7 +32,8 @@
       font-size: 22px;
       font-weight: 800;
     }
-    nav img { height: 40px; }
+    nav img { height: 64px; transition: transform 0.4s ease, filter 0.4s ease; }
+    nav img:hover { transform: scale(1.15) rotate(-2deg); filter: drop-shadow(0 10px 20px rgba(34,211,238,0.6)); }
     nav a {
       margin-left: 32px;
       text-decoration: none;
@@ -49,7 +49,7 @@
       text-align: center;
       animation: fadeIn 1.2s ease-out;
     }
-    .hero img { height: 120px; margin-bottom: 40px; }
+    .hero img { height: 180px; margin-bottom: 50px; animation: float 6s ease-in-out infinite; }
     .hero h1 { font-size: 72px; font-weight: 800; margin-bottom: 24px; }
     .hero p { font-size: 22px; max-width: 800px; margin: 0 auto 48px; opacity: 0.9; }
     .btn {
@@ -97,7 +97,30 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-18px); }
+      100% { transform: translateY(0px); }
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: sectionReveal 1s ease forwards;
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.8s; }
+
+    @keyframes sectionReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
       to { opacity: 1; transform: scale(1); }
     }
   </style>
