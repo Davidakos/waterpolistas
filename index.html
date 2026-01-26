@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterpolistas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #020617, #020b2d, #062a4d);
+      color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    nav img { height: 40px; }
+    nav a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #22d3ee; }
+
+    section { padding: 140px 40px; }
+
+    .hero {
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .hero img { height: 120px; margin-bottom: 40px; }
+    .hero h1 { font-size: 72px; font-weight: 800; margin-bottom: 24px; }
+    .hero p { font-size: 22px; max-width: 800px; margin: 0 auto 48px; opacity: 0.9; }
+    .btn {
+      padding: 18px 44px;
+      font-size: 20px;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+      color: #020617;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 20px 40px rgba(34,211,238,0.35);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 40px;
+      transition: transform 0.4s;
+    }
+    .card:hover { transform: translateY(-12px); }
+    h2 { font-size: 48px; text-align: center; margin-bottom: 80px; }
+    h3 { font-size: 26px; margin-bottom: 16px; }
+    p { line-height: 1.7; }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.75;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <img src="logo.png" alt="Waterpolistas Logo" />
+    Waterpolistas
+  </div>
+  <div>
+    <a href="#info">Information</a>
+    <a href="#how">How to Play</a>
+    <a href="#about">Who Are We</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="logo.png" alt="Waterpolistas Logo" />
+  <h1>Rule the Pool</h1>
+  <p>A competitive water polo game where teamwork, speed, and strategy decide who dominates the water.</p>
+  <button class="btn">Dive In</button>
+</section>
+
+<section id="info">
+  <h2>Game Information</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Gameplay</h3>
+      <p>Fluid swimming, realistic ball physics, and intense goal action inspired by real water polo.</p>
+    </div>
+    <div class="card">
+      <h3>Multiplayer</h3>
+      <p>Online ranked matches, private games with friends, and global tournaments.</p>
+    </div>
+    <div class="card">
+      <h3>Modes</h3>
+      <p>Quick Match, Career Mode, Tournament Mode, and Practice Pool.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How to Play</h2>
+  <div class="grid">
+    <div class="card"><h3>Objective</h3><p>Score more goals than your opponent before time runs out.</p></div>
+    <div class="card"><h3>Controls</h3><p>Swim, pass, shoot, block, and sprint using intuitive controls.</p></div>
+    <div class="card"><h3>Team Play</h3><p>Coordination and positioning are key to victory.</p></div>
+    <div class="card"><h3>Progression</h3><p>Win matches, rank up, and unlock cosmetics.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Who Are We</h2>
+  <div style="max-width:900px;margin:auto;font-size:22px;text-align:center;opacity:0.9;">
+    We are passionate developers and water polo fans creating the ultimate digital water polo experience.
+    Waterpolistas is built with competition, realism, and community in mind.
+  </div>
+</section>
+
+<footer>
+  © 2026 Waterpolistas. All rights reserved.
+</footer>
+
+</body>
+</html>
