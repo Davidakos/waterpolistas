@@ -127,6 +127,13 @@
 </head>
 <body>
 
+<!-- Wave Background -->
+<div class="waves">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+
 <nav>
   <div class="brand">
     <img src="logo.png" alt="Waterpolistas Logo" />
@@ -139,28 +146,19 @@
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero visible">
   <img src="logo.png" alt="Waterpolistas Logo" />
   <h1>Rule the Pool</h1>
-  <p>A competitive water polo game where teamwork, speed, and strategy decide who dominates the water.</p>
+  <p>A next-generation water polo game blending realism, arcade speed, and competitive multiplayer.</p>
   <button class="btn">Dive In</button>
 </section>
 
 <section id="info">
   <h2>Game Information</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Gameplay</h3>
-      <p>Fluid swimming, realistic ball physics, and intense goal action inspired by real water polo.</p>
-    </div>
-    <div class="card">
-      <h3>Multiplayer</h3>
-      <p>Online ranked matches, private games with friends, and global tournaments.</p>
-    </div>
-    <div class="card">
-      <h3>Modes</h3>
-      <p>Quick Match, Career Mode, Tournament Mode, and Practice Pool.</p>
-    </div>
+    <div class="card"><h3>Gameplay</h3><p>Fluid swimming, realistic ball physics, and intense goal action inspired by real water polo.</p></div>
+    <div class="card"><h3>Multiplayer</h3><p>Online ranked matches, private games with friends, and global tournaments.</p></div>
+    <div class="card"><h3>Modes</h3><p>Quick Match, Career Mode, Tournament Mode, and Practice Pool.</p></div>
   </div>
 </section>
 
@@ -178,13 +176,30 @@
   <h2>Who Are We</h2>
   <div style="max-width:900px;margin:auto;font-size:22px;text-align:center;opacity:0.9;">
     We are passionate developers and water polo fans creating the ultimate digital water polo experience.
-    Waterpolistas is built with competition, realism, and community in mind.
   </div>
 </section>
 
-<footer>
-  © 2026 Waterpolistas. All rights reserved.
-</footer>
+<footer>© 2026 Waterpolistas. All rights reserved.</footer>
+
+<!-- Ripple Effect -->
+<script>
+  document.addEventListener("mousemove", e => {
+    const ripple = document.createElement("span");
+    ripple.className = "ripple";
+    ripple.style.left = e.clientX + "px";
+    ripple.style.top = e.clientY + "px";
+    document.body.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 1000);
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+</script>
 
 </body>
 </html>
