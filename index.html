@@ -189,6 +189,14 @@
     </div>
   </header>
 
+  <!-- PLAYER COUNT BAR -->
+  <div style="background: rgba(0,0,0,0.6); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="container" style="display:flex; justify-content:center; gap:12px; padding:10px 0; font-size:0.95rem;">
+      <span>🟢 Online Players:</span>
+      <strong id="playerCount">Loading...</strong>
+    </div>
+  </div>
+
   <main>
     <!-- HERO -->
     <section class="hero">
@@ -324,5 +332,27 @@
       <p>© 2026 DynastyMC | Minecraft Server Website</p>
     </div>
   </footer>
+  <script>
+    // Fetch Minecraft server status (Java & Bedrock compatible)
+    const SERVER_IP = "souvlakismp.gr";
+
+    async function updatePlayerCount() {
+      try {
+        const res = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
+        const data = await res.json();
+
+        if (data && data.players) {
+          document.getElementById('playerCount').textContent = `${data.players.online} / ${data.players.max}`;
+        } else {
+          document.getElementById('playerCount').textContent = "Offline";
+        }
+      } catch (err) {
+        document.getElementById('playerCount').textContent = "Error";
+      }
+    }
+
+    updatePlayerCount();
+    setInterval(updatePlayerCount, 10000); // update every 10 seconds
+  </script>
 </body>
 </html>
