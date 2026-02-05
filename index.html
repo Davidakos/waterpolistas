@@ -189,29 +189,7 @@
     </div>
   </header>
 
-  <!-- PLAYER STATUS PANEL -->
-  <section style="padding:40px 0;">
-    <div class="container">
-      <div class="card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; align-items:center; background: linear-gradient(135deg, rgba(211,47,47,0.25), rgba(0,0,0,0.6)), var(--card);">
-        <div>
-          <h3 style="font-family:'Press Start 2P', cursive; font-size:1rem; margin-bottom:10px;">Server Status</h3>
-          <p style="color:var(--muted);">Real-time Minecraft server information</p>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="display:flex; align-items:center; gap:8px; font-size:1.05rem;">
-            <span id="statusDot" style="width:10px; height:10px; border-radius:50%; background:#777; display:inline-block;"></span>
-            <strong id="serverStatus">Loading...</strong>
-          </div>
-          <div style="font-size:0.95rem; color:var(--muted);">Players Online:</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--accent);" id="playerCount">Loading...</div>
-          <div style="margin-top:6px; font-size:0.85rem; color:var(--muted);">IP: <span style="color:#fff;">souvlakismp.gr</span></div>
-          <div style="background:#0b0b10; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); height:10px;">
-            <div id="playerBar" style="height:100%; width:0%; background: linear-gradient(90deg, var(--primary), var(--accent)); transition:0.4s;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   </div>
 
   <main>
@@ -256,6 +234,30 @@
         </div>
       </div>
     </section>
+
+    <!-- PLAYER STATUS PANEL -->
+  <section style="padding:40px 0;">
+    <div class="container">
+      <div class="card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; align-items:center; background: linear-gradient(135deg, rgba(211,47,47,0.25), rgba(0,0,0,0.6)), var(--card);">
+        <div>
+          <h3 style="font-family:'Press Start 2P', cursive; font-size:1rem; margin-bottom:10px;">Server Status</h3>
+          <p style="color:var(--muted);">Real-time Minecraft server information</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:1.05rem;">
+            <span id="statusDot" style="width:10px; height:10px; border-radius:50%; background:#777; display:inline-block;"></span>
+            <strong id="serverStatus">Loading...</strong>
+          </div>
+          <div style="font-size:0.95rem; color:var(--muted);">Players Online:</div>
+          <div style="font-size:1.4rem; font-weight:700; color:var(--accent);" id="playerCount">Loading...</div>
+          <div style="margin-top:6px; font-size:0.85rem; color:var(--muted);">IP: <span style="color:#fff;">souvlakismp.gr</span></div>
+          <div style="background:#0b0b10; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); height:10px;">
+            <div id="playerBar" style="height:100%; width:0%; background: linear-gradient(90deg, var(--primary), var(--accent)); transition:0.4s;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- FEATURES SECTION -->
     <section id="features">
