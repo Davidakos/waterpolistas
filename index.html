@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DynastyMC - Network</title>
+  <title>DynamicMC - Network</title>
   <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #d32f2f; /* red */
+      --primary: #d32f2f;
       --primary-dark: #9a0007;
       --bg: #0f0f14;
       --card: #171721;
@@ -29,6 +29,23 @@
     }
 
     a { color: inherit; text-decoration: none; }
+
+    /* 🔥 GLOW EFFECTS */
+    .glow {
+      text-shadow: 0 0 8px rgba(255,82,82,0.8),
+                   0 0 16px rgba(255,82,82,0.6),
+                   0 0 32px rgba(255,82,82,0.4);
+    }
+
+    .glow-soft {
+      text-shadow: 0 0 6px rgba(255,82,82,0.6);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(255,82,82,0.8),
+                  0 0 30px rgba(255,82,82,0.4);
+    }
 
     header {
       position: sticky;
@@ -106,22 +123,14 @@
       color: white;
     }
 
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(211,47,47,0.25); }
-
-    section {
-      padding: 70px 0;
-    }
+    section { padding: 70px 0; }
 
     .section-title {
       text-align: center;
       margin-bottom: 46px;
     }
 
-    .section-title h2 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-
+    .section-title h2 { font-size: 2.2rem; margin-bottom: 8px; }
     .section-title p { color: var(--muted); }
 
     .grid {
@@ -146,21 +155,9 @@
     .card h3 { margin-bottom: 10px; color: var(--primary); }
     .card p { color: var(--muted); font-size: 0.95rem; }
 
-    .code-box {
-      background: #0b0b10;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-top: 10px;
-      font-family: monospace;
-      font-size: 0.95rem;
-      color: #ffb3b3;
-      overflow-x: auto;
-    }
-
-    .rules-list li {
-      margin-bottom: 10px;
-      color: var(--muted);
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
     }
 
     footer {
@@ -170,19 +167,14 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
-
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div style="display:flex; align-items:center; gap:10px;">
-        <img src="logo.png" alt="DynastyMC Logo" style="width:36px; height:36px;">
-        <div class="logo">DynastyMC</div>
+        <img src="logo.png" alt="DynamicMC Logo" style="width:36px; height:36px;">
+        <div class="logo glow">DynamicMC</div>
       </div>
       <nav class="nav-links">
         <a href="#join">Join</a>
@@ -193,158 +185,36 @@
     </div>
   </header>
 
-  
-  </div>
-
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <h1>Welcome to <span>DynastyMC</span></h1>
-        <p>The ultimate Minecraft server with exciting modes, friendly community, and nonstop adventure. Join now and build your dynasty!</p>
+        <h1 class="glow">Welcome to <span class="glow">DynamicMC</span></h1>
+        <p>The ultimate Minecraft server with exciting modes, friendly community, and nonstop adventure.</p>
         <div class="buttons">
-          <a href="#join" class="btn primary">How to Join</a>
-          <a href="#features" class="btn">Explore Features</a>
+          <a href="#join" class="btn primary glow-soft">How to Join</a>
+          <a href="#features" class="btn glow-soft">Explore Features</a>
         </div>
       </div>
     </section>
 
-    <!-- JOIN SECTION -->
     <section id="join">
       <div class="container">
         <div class="section-title">
-          <h2>How to Join DynastyMC</h2>
+          <h2>How to Join DynamicMC</h2>
           <p>Play on Java or Bedrock Edition</p>
         </div>
 
         <div class="grid">
           <div class="card">
             <h3>Java Edition</h3>
-            <p>1. Open Minecraft Java Edition.</p>
-            <p>2. Click <span class="highlight">Multiplayer</span> → <span class="highlight">Add Server</span>.</p>
-            <p>3. Enter the server address:</p>
-            <div class="code-box">play.dynastymc.net</div>
-            <p>4. Join the server and start playing!</p>
+            <p>Server address:</p>
+            <div class="code-box glow-soft">play.dynamicmc.net</div>
           </div>
 
           <div class="card">
             <h3>Bedrock Edition</h3>
-            <p>1. Open Minecraft Bedrock Edition.</p>
-            <p>2. Go to <span class="highlight">Servers</span> → <span class="highlight">Add Server</span>.</p>
-            <p>3. Enter the details:</p>
-            <div class="code-box">IP: play.dynastymc.net<br>Port: 19132</div>
-            <p>4. Save and join DynastyMC!</p>
+            <div class="code-box glow-soft">IP: play.dynamicmc.net<br>Port: 19132</div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PLAYER STATUS PANEL -->
-  <section style="padding:40px 0;">
-    <div class="container">
-      <div class="card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; align-items:center; background: linear-gradient(135deg, rgba(211,47,47,0.25), rgba(0,0,0,0.6)), var(--card);">
-        <div>
-          <h3 style="font-family:'Press Start 2P', cursive; font-size:1rem; margin-bottom:10px;">Server Status</h3>
-          <p style="color:var(--muted);">Real-time Minecraft server information</p>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="display:flex; align-items:center; gap:8px; font-size:1.05rem;">
-            <span id="statusDot" style="width:10px; height:10px; border-radius:50%; background:#777; display:inline-block;"></span>
-            <strong id="serverStatus">Loading...</strong>
-          </div>
-          <div style="font-size:0.95rem; color:var(--muted);">Players Online:</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--accent);" id="playerCount">Loading...</div>
-          <div style="margin-top:6px; font-size:0.85rem; color:var(--muted);">IP: <span style="color:#fff;">souvlakismp.gr</span></div>
-          <div style="background:#0b0b10; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); height:10px;">
-            <div id="playerBar" style="height:100%; width:0%; background: linear-gradient(90deg, var(--primary), var(--accent)); transition:0.4s;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- FEATURES SECTION -->
-    <section id="features">
-      <div class="container">
-        <div class="section-title">
-          <h2>Server Features</h2>
-          <p>What makes DynastyMC special</p>
-        </div>
-
-        <div class="grid">
-          <div class="card">
-            <h3>Survival & Economy</h3>
-            <p>Build, trade, and grow your wealth with a balanced economy system.</p>
-          </div>
-          <div class="card">
-            <h3>Custom Plugins</h3>
-            <p>Unique gameplay features designed exclusively for DynastyMC.</p>
-          </div>
-          <div class="card">
-            <h3>Events & Rewards</h3>
-            <p>Regular events, giveaways, and competitions with awesome prizes.</p>
-          </div>
-          <div class="card">
-            <h3>Friendly Community</h3>
-            <p>Active staff and players who make the server fun and welcoming.</p>
-          </div>
-          <div class="card">
-            <h3>Anti-Grief & Security</h3>
-            <p>Advanced protection systems to keep your builds safe.</p>
-          </div>
-          <div class="card">
-            <h3>Cross-Platform</h3>
-            <p>Play together with Java and Bedrock players on one server.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOGIN SECTION -->
-    <section id="login">
-      <div class="container">
-        <div class="section-title">
-          <h2>How to Register & Login</h2>
-          <p>Secure your account on DynastyMC</p>
-        </div>
-
-        <div class="grid">
-          <div class="card">
-            <h3>Register</h3>
-            <p>When you join for the first time, type this command in chat:</p>
-            <div class="code-box">/register <password> <password></div>
-            <p>Example:</p>
-            <div class="code-box">/register mypassword mypassword</div>
-          </div>
-
-          <div class="card">
-            <h3>Login</h3>
-            <p>Every time you rejoin the server, type:</p>
-            <div class="code-box">/login <password></div>
-            <p>Example:</p>
-            <div class="code-box">/login mypassword</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RULES SECTION -->
-    <section id="rules">
-      <div class="container">
-        <div class="section-title">
-          <h2>Server Rules</h2>
-          <p>Follow these rules to keep DynastyMC fun for everyone</p>
-        </div>
-
-        <div class="card">
-          <ul class="rules-list">
-            <li>✔ No hacking, cheating, or exploiting bugs.</li>
-            <li>✔ Be respectful to all players and staff.</li>
-            <li>✔ No griefing or stealing from other players.</li>
-            <li>✔ No spamming, advertising, or inappropriate language.</li>
-            <li>✔ Follow staff instructions at all times.</li>
-            <li>✔ Have fun and play fair!</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -352,36 +222,8 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 DynastyMC | All rights reserved</p>
+      <p>© 2026 DynamicMC | All rights reserved</p>
     </div>
   </footer>
-  <script>
-    // Fetch Minecraft server status (Java & Bedrock compatible)
-    const SERVER_IP = "souvlakismp.gr";
-
-    async function updatePlayerCount() {
-      try {
-        const res = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
-        const data = await res.json();
-
-        if (data && data.players) {
-          const online = data.players.online;
-          const max = data.players.max;
-          document.getElementById('playerCount').textContent = `${online} / ${max}`;
-          document.getElementById('serverStatus').textContent = "Online";
-          document.getElementById('statusDot').style.background = "#4caf50";
-          const percent = Math.min((online / max) * 100, 100);
-          document.getElementById('playerBar').style.width = percent + "%";
-        } else {
-          document.getElementById('playerCount').textContent = "Offline";
-        }
-      } catch (err) {
-        document.getElementById('playerCount').textContent = "Error";
-      }
-    }
-
-    updatePlayerCount();
-    setInterval(updatePlayerCount, 10000); // update every 10 seconds
-  </script>
 </body>
 </html>
